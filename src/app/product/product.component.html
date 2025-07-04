@@ -1,0 +1,16 @@
+<h2>Product Manager</h2>
+
+<form (submit)="addProduct(); $event.preventDefault();">
+  <input [(ngModel)]="newProduct.name" placeholder="Product Name" name="name" type="text"/>
+  <input [(ngModel)]="newProduct.price" type="number" placeholder="Price" name="price" />
+  <button class="add-btn">Add Product</button>
+</form>
+
+<ul>
+  <li *ngFor="let product of products">
+    <input [(ngModel)]="product.name" type="text"/>
+    <input [(ngModel)]="product.price" type="number" />
+    <button class="update-btn" (click)="updateProduct(product)">Update</button>
+    <button class="delete-btn" (click)="deleteProduct(product.id)">Delete</button>
+  </li>
+</ul>

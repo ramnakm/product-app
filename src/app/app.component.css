@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  background: #f0f2f5;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #222;
+}
