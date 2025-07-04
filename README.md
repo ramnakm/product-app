@@ -1,59 +1,62 @@
-# ProductApp
+# Product App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+A simple Angular application for managing products. Users can add, update, and delete products using a RESTful API backend.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- List all products
+- Add a new product
+- Update existing products
+- Delete products
 
-```bash
-ng serve
-```
+## Project Structure
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- `src/app/app.component.*` - Main application component
+- `src/app/product/product.component.*` - Product management component
+- `src/app/product/product.model.ts` - Product model
 
-## Code scaffolding
+## Getting Started
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Prerequisites
 
-```bash
-ng generate component component-name
-```
+- [Node.js](https://nodejs.org/)
+- [Angular CLI](https://angular.io/cli)
+- A running backend API at `https://localhost:7264/api/products`
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Installation
 
-```bash
-ng generate --help
-```
+1. Clone the repository:
+    ```sh
+    git clone <repository-url>
+    cd product-app
+    ```
 
-## Building
+2. Install dependencies:
+    ```sh
+    npm install
+    ```
 
-To build the project run:
+3. Run the development server:
+    ```sh
+    ng serve
+    ```
+    The app will be available at `http://localhost:4200/`.
 
-```bash
-ng build
-```
+## Usage
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Use the form to add a new product (name and price required).
+- Edit product details inline and click "Update" to save changes.
+- Click "Delete" to remove a product.
 
-## Running unit tests
+## API
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+The app expects a REST API with the following endpoints:
 
-```bash
-ng test
-```
+- `GET /api/products` - List products
+- `POST /api/products` - Add product
+- `PUT /api/products/{id}` - Update product
+- `DELETE /api/products/{id}` - Delete product
 
-## Running end-to-end tests
+## License
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+MIT
